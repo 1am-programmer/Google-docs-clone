@@ -3,6 +3,7 @@ import { Editor } from "@/components/editor/Editor";
 import Header from "@/components/Header";
 import { RoomProvider, ClientSideSuspense } from "@liveblocks/react/suspense";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import ActiveCollaborators from "./ActiveCollaborators";
 
 // { children }: { children: React.ReactNode }
 
@@ -16,12 +17,15 @@ const CollaborativeRoom = () => {
               <p className="document-title">Share</p>
             </div>
 
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
+            <div className="flex w-full flex-1 gap-2 justify-end sm:gap-3">
+              <ActiveCollaborators />
+              <SignedOut>
+                <SignInButton />
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+            </div>
           </Header>
           <Editor />
         </div>
