@@ -7,9 +7,12 @@ import ActiveCollaborators from "./ActiveCollaborators";
 
 // { children }: { children: React.ReactNode }
 
-const CollaborativeRoom = () => {
+const CollaborativeRoom = ({
+  roomId,
+  roomMetaData,
+}: CollaborativeRoomProps) => {
   return (
-    <RoomProvider id="my-room">
+    <RoomProvider id={roomId}>
       <ClientSideSuspense fallback={<div>Loading…</div>}>
         <div className="collaborative-room">
           <Header>
