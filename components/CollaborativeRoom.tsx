@@ -1,22 +1,12 @@
 "use client";
-
-import { ReactNode } from "react";
-import {
-  LiveblocksProvider,
-  RoomProvider,
-  ClientSideSuspense,
-} from "@liveblocks/react/suspense";
 import { Editor } from "@/components/editor/Editor";
 import Header from "@/components/Header";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { RoomProvider, ClientSideSuspense } from "@liveblocks/react/suspense";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
-const CollaborativeRoom = ({ children }: { children: React.ReactNode }) => {
+// { children }: { children: React.ReactNode }
+
+const CollaborativeRoom = () => {
   return (
     <RoomProvider id="my-room">
       <ClientSideSuspense fallback={<div>Loading…</div>}>

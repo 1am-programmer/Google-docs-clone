@@ -21,11 +21,11 @@ const AddDocumentBtn = ({ email, userId }: AddDocumentBtnProps) => {
     <Button
       type="submit"
       onClick={addDocumentHandler}
-      className="gradient-blue flex gap-1 shadow-md "
+      className="gradient-blue flex gap-1 shadow-md"
     >
       <Image
         src="/assets/icons/add.svg"
-        alt="add  Document"
+        alt="add"
         height={24}
         width={24}
         className=""

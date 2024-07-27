@@ -31,6 +31,6 @@ export const createDocument = async ({
     revalidatePath("/");
     return parseStringify(room);
   } catch (error) {
-    console.log(`Error happened when creating a room:  ${error}`);
+    console.log(`Error happened while creating a room:  ${error}`);
   }
 };
