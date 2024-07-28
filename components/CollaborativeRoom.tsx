@@ -9,7 +9,7 @@ import ActiveCollaborators from "./ActiveCollaborators";
 
 const CollaborativeRoom = ({
   roomId,
-  roomMetaData,
+  roomMetadata,
 }: CollaborativeRoomProps) => {
   return (
     <RoomProvider id={roomId}>
