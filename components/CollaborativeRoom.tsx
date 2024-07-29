@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import { RoomProvider, ClientSideSuspense } from "@liveblocks/react/suspense";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import ActiveCollaborators from "./ActiveCollaborators";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Input } from "./ui/input";
 import Image from "next/image";
 import { updateDocument } from "@/lib/actions/room.actions";
@@ -21,11 +21,12 @@ const CollaborativeRoom = ({
   //State
   const [editing, setEditing] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [documentTitle, setDoocumentTitle] = useState(roomMetadata.title);
+  const [documentTitle, setDocumentTitle] = useState(roomMetadata.title);
 
   //Refs
   const containerRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLDivElement>(null);
+  // const inputRef = React.useRef<HTMLDivElement>(null);
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
   //Update and save on reload
   const updateTitleHandler = async (
@@ -88,9 +89,10 @@ const CollaborativeRoom = ({
                   value={documentTitle}
                   ref={inputRef}
                   placeholder="Enter title"
-                  onChange={(e) => setDoocumentTitle(e.target.value)}
+                  onChange={(e) => setDocumentTitle(e.target.value)}
                   onKeyDown={updateTitleHandler}
                   disabled={!editing}
+                  // disable={!editing}
                   className="document-title-input"
                 />
               ) : (
