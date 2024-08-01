@@ -9,7 +9,7 @@ powered by Clerk for a secure and seamless user experience.
 
 ## Features
 
-- **Real-Time Collaboration**: Multiple users can edit documents simultaneously with real-time updates.
+- **Real-Time Collaboration**: Multiple users can edit documents simultaneously in real-time.
 - **Comments**: Users can add and view comments on documents.
 - **User Authentication**: Secure authentication and user management using Clerk.
 - **Real-Time Features**: Utilizes LiveBlocks for efficient real-time data synchronization.
