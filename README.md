@@ -104,6 +104,3 @@ For questions or feedback, please reach out to [My email](mailto:dannydotdev@gma
 ---
 
 Happy collaborating!
-
-```
-
