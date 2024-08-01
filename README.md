@@ -9,17 +9,17 @@ powered by Clerk for a secure and seamless user experience.
 
 ## Features
 
-- **Real-Time Collaboration**: Multiple users can edit documents simultaneously in real-time.
-- **Comments**: Users can add and view comments on documents.
-- **User Authentication**: Secure authentication and user management using Clerk.
-- **Real-Time Features**: Utilizes LiveBlocks for efficient real-time data synchronization.
+- **Real-Time Collaboration** : Multiple users can edit documents simultaneously in real-time.
+- **Comments** : Users can add and view comments on documents.
+- **User Authentication** : Secure authentication and user management using Clerk.
+- **Real-Time Features** : Utilizes LiveBlocks for efficient real-time data synchronization.
 
 ## Technologies Used
 
-- **Next.js**: Framework for server-rendered React applications.
-- **TypeScript**: Superset of JavaScript adding static types.
-- **LiveBlocks**: Real-time data synchronization library.
-- **Clerk**: Authentication and user management platform.
+- **Next.js** : Framework for server-rendered React applications.
+- **TypeScript** : Superset of JavaScript adding static types.
+- **LiveBlocks** : Real-time data synchronization library.
+- **Clerk** : Authentication and user management platform.
 
 ## Getting Started
 
@@ -95,7 +95,7 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. 
 
 ## Contact
 
