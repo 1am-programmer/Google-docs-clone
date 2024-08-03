@@ -1,7 +1,6 @@
 import CollaborativeRoom from "@/components/CollaborativeRoom";
 import { getDocument } from "@/lib/actions/room.actions";
 import { getClerkUsers } from "@/lib/actions/user.actions";
-import { liveblocks } from "@/lib/liveblocks";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
@@ -16,11 +15,9 @@ const Document = async ({ params: { id } }: SearchParamProps) => {
 
   if (!room) redirect("/");
 
-  //TODO:Assess the permission of the user to access the document
-
   const userIds = Object.keys(room.usersAccesses);
   const users = await getClerkUsers({ userIds });
-  const userData = users.map((user: User) => ({
+  const usersData = users.map((user: User) => ({
     ...user,
     userType: room.usersAccesses[user.email]?.includes("room:write")
       ? "editor"
@@ -38,7 +35,7 @@ const Document = async ({ params: { id } }: SearchParamProps) => {
       <CollaborativeRoom
         roomId={id}
         roomMetadata={room.metadata}
-        users={userData}
+        users={usersData}
         currentUserType={currentUserType}
       />
     </main>

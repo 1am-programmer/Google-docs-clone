@@ -26,7 +26,7 @@ export const createDocument = async ({
     const room = await liveblocks.createRoom(roomId, {
       metadata,
       usersAccesses,
-      defaultAccesses: [],
+      defaultAccesses: ["room:write"],
     });
 
     revalidatePath("/");
@@ -67,7 +67,7 @@ export const updateDocument = async (roomId: string, title: string) => {
       },
     });
 
-    revalidatePath(`/documents/${roomId}`);
+    revalidatePath(`/document/${roomId}`);
 
     return parseStringify(updatedRoom);
   } catch (error) {
