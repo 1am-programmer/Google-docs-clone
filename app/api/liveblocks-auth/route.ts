@@ -1,7 +1,6 @@
 import { liveblocks } from "@/lib/liveblocks";
 import { getUserColor } from "@/lib/utils";
 import { currentUser } from "@clerk/nextjs/server";
-import { colors } from "@clerk/themes/dist/clerk-js/src/ui/foundations/colors";
 import { redirect } from "next/navigation";
 
 export async function POST(request: Request) {
@@ -24,7 +23,7 @@ export async function POST(request: Request) {
   // Identify the user and return the result
   const { status, body } = await liveblocks.identifyUser(
     {
-      userId: user.info.id,
+      userId: user.info.email,
       groupIds: [], // Optional
     },
     { userInfo: user.info }

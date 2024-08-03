@@ -10,8 +10,6 @@ import Image from "next/image";
 import { updateDocument } from "@/lib/actions/room.actions";
 import Loader from "./Loader";
 
-// { children }: { children: React.ReactNode }
-
 const CollaborativeRoom = ({
   roomId,
   roomMetadata,

@@ -4,7 +4,7 @@ import Image from "next/image";
 import AddDocumentBtn from "@/components/AddDocumentBtn";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { getSavedDocuments } from "@/lib/actions/room.actions";
+import { getDocuments } from "@/lib/actions/room.actions";
 import Link from "next/link";
 import { dateConverter } from "@/lib/utils";
 
@@ -12,7 +12,7 @@ const page = async () => {
   const clerkUser = await currentUser();
   if (!clerkUser) redirect("/sign-in");
 
-  const roomDocuments = await getSavedDocuments(
+  const roomDocuments = await getDocuments(
     clerkUser.emailAddresses[0].emailAddress
   );
 
