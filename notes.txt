@@ -67,3 +67,4 @@ Creating a folder or file for [...sign-in] is likely related to setting up your 
 routes in a way that integrates with Clerk. Follow Clerk’s documentation for detailed setup instructions and adjust your project structure according to your needs.
 If you’re unsure about the folder name or its purpose, refer to Clerk’s integration guides or documentation for more specifics.
 
+
