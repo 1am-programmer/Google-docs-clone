@@ -7,6 +7,7 @@ import { redirect } from "next/navigation";
 import { getDocuments } from "@/lib/actions/room.actions";
 import Link from "next/link";
 import { dateConverter } from "@/lib/utils";
+import { DeleteModal } from "@/components/editor/DeleteModal";
 
 const page = async () => {
   const clerkUser = await currentUser();
@@ -59,7 +60,7 @@ const page = async () => {
                     </p>
                   </div>
                 </Link>
-                {/* Add a delete button  */}
+                <DeleteModal roomId={id} />
               </li>
             ))}
           </ul>
